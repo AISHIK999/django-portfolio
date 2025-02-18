@@ -1,0 +1,247 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}AISHIK999{% endblock %}</title>
+    <script src="https://kit.fontawesome.com/6d15a2862c.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.6.0/dist/echarts.min.js" defer></script>
+    {#    <link rel="stylesheet" href="{% static 'css/main.css' %}">#}
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+    {#     BELOW STYLESHEETS  TO BE NUKED IN PROD #}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    <link rel="stylesheet" href="{% static 'css/experience.css' %}">
+    <link rel="stylesheet" href="{% static 'css/project.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    {# ABOVE STYLESHEETS  TO BE NUKED IN PROD #}
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
+
+    <script src="{% static 'js/sevenDaysActivity.js' %}" defer></script>
+    <script src="{% static 'js/languageTimeCoded.js' %}" defer></script>
+    <script src="{% static 'js/navbar.js' %}" defer></script>
+    <script src="{% static 'js/typed.js' %}" defer></script>
+    <script src="{% static 'js/card.js' %}" defer></script>
+    <script src="{% static 'js/player.js' %}" defer></script>
+</head>
+<body>
+{# NAVBAR #}
+<nav id="nav-container">
+    <div class="nav-wrapper">
+        <div class="navbar">
+            <button class="navbar-btn active-btn" data-id="home" aria-label="home">
+                <i class="fas fa-home"></i>
+            </button>
+            <button class="navbar-btn" data-id="profile" aria-label="profile">
+                <i class="fas fa-user"></i>
+            </button>
+            <button class="navbar-btn" data-id="experience" aria-label="experience">
+                <i class="far fa-newspaper"></i>
+            </button>
+            <button class="navbar-btn" data-id="projects" aria-label="projects">
+                <i class="fas fa-laptop"></i>
+            </button>
+            <button class="navbar-btn" data-id="contact" aria-label="contact">
+                <i class="fas fa-envelope-open"></i>
+            </button>
+        </div>
+        <div class="theme-bar">
+            <button class="theme-btn theme-btn-moon active-btn" aria-label="dark theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="theme-btn theme-btn-sun" aria-label="light theme">
+                <i class="fas fa-sun"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+{# END NAVBAR #}
+
+{# HOME #}
+<section id="home" class="active">
+    <div class="vertical-container">
+        <div class="horizontal-container">
+            <div class="vertical-container" id="content-desc">
+                <div class="description inter">
+                    Hi! I am
+                </div>
+                <div id="name" class="playwrite-in">
+                    Aishik Mukherjee
+                </div>
+                <span id="typing" class="fira-code"></span>
+                <div class="btn-con">
+                    <a class="main-btn"
+                       href="https://ik.imagekit.io/AISHIK999/resume/Aishik%20Mukherjee%20resume.pdf?updatedAt=1721581233491"
+                       target="_blank">
+                        <span class="btn-text inter">Download résumé</span>
+                        <span class="btn-icon"><i class="fas fa-download" style="color:var(--color-bg)"></i></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="vertical-container" id="user-image">
+                <div class="card">
+                    <div class="glow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{# END HOME #}
+
+{# PROFILE #}
+<section id="profile">
+    <div class="vertical-container">
+        <span class="heading">PROFILE</span>
+        <div id="profile-desc" class="data-card">
+            I’m a tech geek who loves tinkering with gadgets and building cool stuff.
+            Professionally, I'm completely invested in the data domain, working with PySpark, Hive and SQL with
+            automation & CI/CD technologies like Power Automate and Jenkins.
+            <br><br>
+            At home, I’ve turned my humble abode into a mini tech hub with a home server setup that includes a NAS
+            (data
+            hoarding FTW) and a
+            private Minecraft server.
+            I'm also hosting and maintaining a search engine and a VLAN network with components like Wireguard and
+            PiHole.
+            <br><br>
+            I can never be 100% anonymous on the internet, but I try to keep my digital footprint as small as
+            possible.
+            <br><br>
+            At the end of the day, I’m just a curious soul who loves solving problems and building things. I’ve got
+            a soft spot for old-school tech. Yet, I’m always excited to dive into the latest tech and see what’s
+            possible. It's about finding the balance between innovation and reliability.
+        </div>
+        <div class="horizontal-container" id="player-stack">
+            <div class="data-card horizontal-container" id="player">
+                <div id="song-info" class="vertical-container">
+                    <p>I'm listening to...</p>
+                    <span id="song-title"></span>
+                    <span id="song"></span>
+                    <span id="artist"></span>
+                    <span id="album"></span>
+                </div>
+                <div id="album-art">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div id="tech-stack" class="data-card">
+                <p>My tech stack</p>
+                <img src="https://skillicons.dev/icons?i=linux,postgres,py,django,go,bash,powershell,azure&perline=8"
+                     alt="tech stack"/>
+            </div>
+        </div>
+    </div>
+</section>
+{# END PROFILE #}
+
+{# EXPERIENCE #}
+<section id="experience">
+    <div class="vertical-container">
+        <div class="heading">EXPERIENCE</div>
+        <div class="horizontal-container" id="wakatime-container">
+            <div class="data-card">
+                <p>My coding activity over the past week</p>
+                <div id="line-chart-container"></div>
+            </div>
+            <div class="data-card">
+                <p>Languages I coded over time</p>
+                <div id="bar-chart-container"></div>
+            </div>
+        </div>
+        <div id="professional-experience">
+            <div class="experience-container">
+                {% regroup experience_list by company_name as company_list %}
+                {% for company in company_list %}
+                    <div class="company-group data-card">
+                        <h3 class="company-name">{{ company.grouper }}</h3>
+
+                        {% for role in company.list %}
+                            <div class="role">
+                                <h4 class="role-title">{{ role.designation }}</h4>
+                                <p class="role-duration">
+                                    {{ role.start_date|date:"M Y" }} -
+                                    {% if role.end_date %}
+                                        {{ role.end_date|date:"M Y" }}
+                                    {% else %}
+                                        Present
+                                    {% endif %}
+                                </p>
+                                <p class="role-description">{{ role.description }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{# END EXPERIENCE #}
+
+{# PROJECTS #}
+<section id="projects">
+    <div class="vertical-container">
+        <div class="heading">PROJECTS</div>
+        <div class="project-container">
+            {% for project in project_list %}
+                <div class="project-item">
+                    <div class="image">
+                        <img class="project-image
+" alt="" src="{{ project.image_link }}">
+                        <label>{{ project.title }}</label>
+                    </div>
+                    <div class="hover-items">
+                        <h3>{{ project.title }}</h3>
+                        <br>
+                        <p>{{ project.description }}</p>
+                        <div class="badge">
+                            <img src="{{ project.badge_link }}" alt="">
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{# END PROJECTS #}
+
+{# CONTACT #}
+<section id="contact">
+    <div class="vertical-container">
+        <div class="heading">CONTACT</div>
+        <div class="vertical-container">
+            <div class="description horizontal-container data-card">
+                <p>Have a question? Want to chat? Or maybe want to send a multiplayer invite? Either way, my inbox is
+                    open to all !</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-item">
+                    <div class="contact-label">Location:</div>
+                    <div class="contact-value">Kolkata, India</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-label">Email ID:</div>
+                    <div class="contact-value">
+                        <a href="mailto:aishikm2002@duck.com">aishikm2002@duck.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-label">Telegram Username:</div>
+                    <div class="contact-value">
+                        <a href="https://t.me/AISHIK999">@AISHIK999</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-label">Spoken languages:</div>
+                    <div class="contact-value">English, Hindi, Bengali</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{# END CONTACT #}
+
+</body>

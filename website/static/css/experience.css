@@ -1,0 +1,155 @@
+#experience {
+    height: auto;
+    overflow-y: visible;
+    margin-bottom: 10vh;
+}
+
+#line-chart-container {
+    height: 60vh;
+    width: 40vw;
+}
+
+#bar-chart-container {
+    height: 60vh;
+    width: 40vw;
+}
+
+#wakatime-container {
+    justify-content: space-around !important;
+    align-items: flex-start;
+    width: 100%;
+    /*gap: 0;*/
+    padding: 2rem;
+    box-sizing: border-box;
+    margin-top: 1rem;
+}
+
+#wakatime-container .data-card {
+    padding: 0;
+    margin: 0;
+}
+
+#wakatime-container p {
+    text-align: center;
+    color: var(--color-tx);
+}
+
+#professional-experience {
+    margin-top: 2rem;
+}
+
+.experience-container {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.company-group {
+    margin-bottom: 2rem;
+    position: relative;
+    padding-left: 3rem;
+    border-left: 2px solid var(--color-secondary);
+}
+
+/*.company-group::before {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    width: 12px;*/
+/*    height: 12px;*/
+/*    background: var(--color-highlight);*/
+/*    border-radius: 50%;*/
+/*    left: -7px;*/
+/*    top: 0;*/
+/*}*/
+
+.company-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-tx);
+    margin: 0;
+}
+
+.role {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+    border-left: 1px solid var(--color-highlight);
+}
+
+.role::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--color-highlight);
+    border-radius: 50%;
+    left: -4px;
+    top: 8px;
+}
+
+.role-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-tx-2);
+    margin: 0;
+}
+
+.role-duration {
+    font-size: 1rem;
+    color: var(--color-tx-3);
+    margin: 0.5rem 0;
+}
+
+.role-description {
+    font-size: 1.25rem;
+    color: var(--color-tx-2);
+    line-height: 1.5;
+    margin: 8px 0 0 0;
+}
+
+@media (max-width: 768px) {
+    #line-chart-container {
+        height: 50vh;
+        width: 80vw;
+    }
+
+    #bar-chart-container {
+        height: 50vh;
+        width: 80vw;
+    }
+
+    .horizontal-container {
+        flex-direction: column;
+    }
+
+    #wakatime-container {
+        font-size: 0.75rem;
+        justify-content: space-around !important;
+        align-items: flex-start;
+        width: 100%;
+        padding: 2rem;
+        box-sizing: border-box;
+        margin-top: 1rem;
+    }
+
+    #wakatime-container .data-card {
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+
+    .company-name{
+        font-size: 1rem;
+    }
+    .role-title{
+        font-size: 0.8rem;
+    }
+    .role-description{
+        font-size: 0.75rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+
+}
