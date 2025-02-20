@@ -188,19 +188,24 @@
         <div class="project-container">
             {% for project in project_list %}
                 <div class="project-item">
-                    <div class="image">
-                        <img class="project-image
-" alt="" src="{{ project.image_link }}">
-                        <label>{{ project.title }}</label>
-                    </div>
-                    <div class="hover-items">
-                        <h3>{{ project.title }}</h3>
-                        <br>
-                        <p>{{ project.description }}</p>
-                        <div class="badge">
-                            <img src="{{ project.badge_link }}" alt="">
+                    <a href="{{ project.github_link }}">
+                        <div class="image">
+                            <img class="project-image" alt="" src="{{ project.image_link }}">
+                            <label>{{ project.title }}</label>
                         </div>
-                    </div>
+                        <div class="hover-items">
+                            <h3>{{ project.title }}</h3>
+                            <br>
+                            <p>{{ project.description }}</p>
+                            <div class="badge">
+                                <img src="{{ project.badge_link }}" alt="">
+                            </div>
+                            <!-- <a class="icon" href={{ project.github_link }} target="_blank">
+                                <img src="https://skillicons.dev/icons?i=github&perline=1"
+                                     alt="github link"/>
+                            </a> -->
+                        </div>
+                    </a>
                 </div>
             {% endfor %}
         </div>
